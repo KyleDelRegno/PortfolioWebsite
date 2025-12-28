@@ -1,13 +1,41 @@
 'use client'
 import Image from "next/image";
 import tailwindcss from "@tailwindcss/postcss";
-import GridComponent from "@/components/GridDisplay";
+import GridComponent, {ProjectData} from "@/components/GridDisplay";
+import DisplayItem from "@/components/DisplayItem";
+import { useState } from "react";
+import projectJson from "@/public/Data/projects.json" with {type: "json"};
 
 let good = ""
+let items = projectJson
+
 
 const HomePage : React.FC = () => {
+  //Used To refresh the page when called
+  const [, setVersion] = useState(0); 
+  const refreshPage = () => { setVersion(v => v + 1) };
+  //Used To set the selected option Data
+  const [selected_data, setSelected] = useState<ProjectData | undefined>();
+  const [selected_id, setID] = useState("");
+  function triggerSelected(id: string){
+    if(selected_data && selected_id){
+      setSelected(undefined);
+      setID("");
+      refreshPage();
+    }
+    else{
+      setID(id);
+      for(const i in items){
+        if(id==items[i].project){
+            let jsonData=items[i]
+            setSelected(new ProjectData(items[i].project, items[i].role, items[i].description, items[i].images));
+        }
+      refreshPage();
+    };
+    }
+  }
 
-  function temp(id: string){}
+
   return (
 
     <main>
@@ -35,7 +63,8 @@ const HomePage : React.FC = () => {
         </div>
       </section>
       <section className="h-200 bg-amber-50 pt-10">
-        <GridComponent onSelect={temp}></GridComponent>
+        <GridComponent onSelect={triggerSelected}></GridComponent>
+        {selected_id && selected_data && (<DisplayItem project={selected_id} projectData={selected_data} onClose={triggerSelected}></DisplayItem>)}
       </section>
     </main>
   );

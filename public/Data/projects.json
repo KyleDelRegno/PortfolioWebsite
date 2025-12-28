@@ -3,7 +3,7 @@
         "project" : "Subliminal",
         "role" : "test",
         "description" : "test",
-        "Images" : [
+        "images" : [
             "/Data/images/sub1.PNG",
             "/Data/images/sub2.PNG",
             "/Data/images/sub3.PNG",
@@ -25,7 +25,7 @@
         "project" : "Contract",
         "role" : "test",
         "description" : "test",
-        "Images" : [
+        "images" : [
             "/Data/images/con1.PNG",
             "/Data/images/con2.PNG",
             "/Data/images/con3.PNG",
@@ -39,7 +39,7 @@
         "project" : "Back To The Future",
         "role" : "test",
         "description" : "test",
-        "Images" : [
+        "images" : [
             "/Data/images/con1.PNG",
             "/Data/images/con2.PNG",
             "/Data/images/con3.PNG",
