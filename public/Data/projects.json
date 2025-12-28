@@ -1,29 +1,60 @@
 [
     {
-        "project" : "Subliminal",
-        "role" : "test",
+        "project" : "Back To The Future",
+        "type" : "Photo",
+        "role" : ["Photographer", "Editor"],
+        "date" : "May 2025",
         "description" : "test",
         "images" : [
-            "/Data/images/sub1.PNG",
-            "/Data/images/sub2.PNG",
-            "/Data/images/sub3.PNG",
-            "/Data/images/sub4.PNG",
-            "/Data/images/sub5.PNG",
-            "/Data/images/sub6.PNG",
-            "/Data/images/sub7.PNG",
-            "/Data/images/sub8.PNG",
-            "/Data/images/sub9.PNG",
-            "/Data/images/sub10.PNG",
-            "/Data/images/sub11.PNG",
-            "/Data/images/sub12.PNG",
-            "/Data/images/sub13.PNG",
-            "/Data/images/sub14.PNG"
+            "/Data/images/btf1.jpg",
+            "/Data/images/btf2.jpg",
+            "/Data/images/btf3.jpg",
+            "/Data/images/btf4.jpg",
+            "/Data/images/btf5.jpg",
+            "/Data/images/btf6.jpg",
+            "/Data/images/btf7.jpg",
+            "/Data/images/btf8.jpg",
+            "/Data/images/btf9.jpg",
+            "/Data/images/btf10.jpg",
+            "/Data/images/btf11.jpg",
+            "/Data/images/btf12.jpg",
+            "/Data/images/btf13.jpg",
+            "/Data/images/btf14.jpg",
+            "/Data/images/btf15.jpg",
+            "/Data/images/btf16.jpg",
+            "/Data/images/btf17.jpg",
+            "/Data/images/btf18.jpg",
+            "/Data/images/btf19.jpg",
+            "/Data/images/btf20.jpg",
+            "/Data/images/btf21.jpg"
+        ]
+    },
+    {
+        "project" : "CyberPunk",
+        "type" : "Photo",
+        "role" : ["Photographer", "Editor"],
+        "date" : "March 2025",
+        "description" : "test",
+        "images" : [
+            "/Data/images/cyber1.jpg",
+            "/Data/images/cyber2.jpg",
+            "/Data/images/cyber3.jpg",
+            "/Data/images/cyber4.jpg",
+            "/Data/images/cyber5.jpg",
+            "/Data/images/cyber6.jpg",
+            "/Data/images/cyber7.jpg",
+            "/Data/images/cyber8.jpg",
+            "/Data/images/cyber9.jpg",
+            "/Data/images/cyber10.jpg",
+            "/Data/images/cyber11.jpg"
             
         ]
     },
     {
-        "project" : "Sublimina2l",
-        "role" : "test",
+        "project" : "Subliminal",
+        "type" : "Video",
+        "role" : ["Director", "Producer", "Editor"],
+        "date" : "December 2024 - January 2025",
         "description" : "test",
         "images" : [
             "/Data/images/sub1.PNG",
@@ -45,7 +76,9 @@
     },
     {
         "project" : "Contract",
-        "role" : "test",
+        "type" : "Video",
+        "role" : ["Director", "Producer", "Editor"],
+        "date" : "September 2024 - October 2024",
         "description" : "test",
         "images" : [
             "/Data/images/con1.PNG",
@@ -57,9 +90,12 @@
             "/Data/images/con7.PNG"
         ]
     },
+    
     {
-        "project" : "Contract2",
-        "role" : "test",
+        "project" : "Contract4",
+        "type" : "Video",
+        "role" : ["Director", "Producer", "Editor"],
+        "date" : "September 2024 - October 2024",
         "description" : "test",
         "images" : [
             "/Data/images/con1.PNG",
@@ -71,65 +107,12 @@
             "/Data/images/con7.PNG"
         ]
     },
-    {
-        "project" : "Back To The Future",
-        "role" : "test",
-        "description" : "test",
-        "images" : [
-            "/Data/images/con1.PNG",
-            "/Data/images/con2.PNG",
-            "/Data/images/con3.PNG",
-            "/Data/images/con4.PNG",
-            "/Data/images/con5.PNG",
-            "/Data/images/con6.PNG",
-            "/Data/images/con7.PNG"
-        ]
-    },
-    {
-        "project" : "Contract24",
-        "role" : "test",
-        "description" : "test",
-        "images" : [
-            "/Data/images/con1.PNG",
-            "/Data/images/con2.PNG",
-            "/Data/images/con3.PNG",
-            "/Data/images/con4.PNG",
-            "/Data/images/con5.PNG",
-            "/Data/images/con6.PNG",
-            "/Data/images/con7.PNG"
-        ]
-    },
-    {
-        "project" : "Contract23",
-        "role" : "test",
-        "description" : "test",
-        "images" : [
-            "/Data/images/con1.PNG",
-            "/Data/images/con2.PNG",
-            "/Data/images/con3.PNG",
-            "/Data/images/con4.PNG",
-            "/Data/images/con5.PNG",
-            "/Data/images/con6.PNG",
-            "/Data/images/con7.PNG"
-        ]
-    },
-    {
-        "project" : "Contract21",
-        "role" : "test",
-        "description" : "test",
-        "images" : [
-            "/Data/images/con1.PNG",
-            "/Data/images/con2.PNG",
-            "/Data/images/con3.PNG",
-            "/Data/images/con4.PNG",
-            "/Data/images/con5.PNG",
-            "/Data/images/con6.PNG",
-            "/Data/images/con7.PNG"
-        ]
-    },
-    {
-        "project" : "Contract22",
-        "role" : "test",
+    
+    { 
+        "project" : "Contract3",
+        "type" : "Video",
+        "role" : ["Director", "Producer", "Editor"],
+        "date" : "September 2024 - October 2024",
         "description" : "test",
         "images" : [
             "/Data/images/con1.PNG",

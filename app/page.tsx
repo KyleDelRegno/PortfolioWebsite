@@ -29,7 +29,7 @@ const HomePage : React.FC = () => {
       for(const i in items){
         if(id==items[i].project){
             let jsonData=items[i]
-            setSelected(new ProjectData(items[i].project, items[i].role, items[i].description, items[i].images));
+            setSelected(new ProjectData(items[i].project, items[i].type, items[i].role, items[i].date, items[i].description, items[i].images));
         }
       refreshPage();
     };
