@@ -22,32 +22,26 @@ type GridDisplayData = {
     onSelect: (id: string) => void
 }
 
-let itemsN = projectJson;
-let populated = false;
+let items = projectJson;
 
 
 //window.location.href = ('@/Explore/Party/' + encodeURIComponent(option.id))}
 
 export default function GridComponent({ onSelect }: GridDisplayData) {
-    
-    if(!populated){
-        console.log(itemsN);
-    }
 
     return (
-        // <section>
-        //     <h2 className="text-6xl">{title}</h2>
-        //     <div className="flex flex-nowrap overflow-visible bg-gray-100 rounded-xl">
-        //         {options.map((option) => ( //loops through each option given
-        //             <div key={option.id} className="min-w-70 m-0.5 
-        //             transition duration-300 ease-in-out hover:scale-120 hover:z-60">
-        //                 <img src={option.imageUrl} alt="*Image*" className="cursor-pointer w-70 h-87.5 origin-center 
-        //                 "
-        //                 onClick={() => onSelect(option.id)}></img>
-        //             </div>
-        //         ))}
-        //     </div>
-        // </section>
-        <div onClick={() => onSelect("buns")}></div>
+        <div className="h-full flex flex-wrap">
+            {items.map((project) =>( //loops through all the projects
+                <div key={project.project} className="relative flex group w-100 h-fit m-10 
+                transition duration-300 ease-in-out hover:scale-120 hover:z-60">
+                    <div className="invisible absolute inset-0 bg-gray-600/60 size-full group-hover:visible">
+                        <div className="flex h-full w-full justify-center items-center">
+                            <h1 className="text-3xl m-10 text-center text-wrap font-black">{project.project}</h1>
+                        </div>
+                    </div>
+                    <img src={project.Images[0]} className="object-contain"></img>
+                </div>
+            ))}
+        </div>
     );
 }

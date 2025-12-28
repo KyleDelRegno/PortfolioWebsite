@@ -34,7 +34,7 @@ const HomePage : React.FC = () => {
           <div className="@Space grow max-w-200"></div>
         </div>
       </section>
-      <section className="h-100 bg-amber-50">
+      <section className="h-200 bg-amber-50 pt-10">
         <GridComponent onSelect={temp}></GridComponent>
       </section>
     </main>
