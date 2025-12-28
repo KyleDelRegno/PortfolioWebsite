@@ -30,9 +30,12 @@ let items = projectJson;
 export default function GridComponent({ onSelect }: GridDisplayData) {
 
     return (
-        <div className="h-full flex flex-wrap">
+        <div className="m-10 h-full grid gap-4 
+        xl:grid-cols-[repeat(auto-fit,_minmax(400px,_1fr))] 
+        lg:grid-cols-[repeat(auto-fit,_minmax(300px,_1fr))]
+        grid-cols-[repeat(auto-fit,_minmax(200px,_1fr))]">
             {items.map((project) =>( //loops through all the projects
-                <div key={project.project} className="relative flex group w-100 h-fit m-10 
+                <div key={project.project} className="relative flex group w-100px h-fit
                 transition duration-300 ease-in-out hover:scale-120 hover:z-60" onClick={() => onSelect(project.project)}>
                     <div className="invisible absolute inset-0 bg-gray-600/60 size-full group-hover:visible">
                         <div className="flex h-full w-full justify-center items-center">

@@ -7,7 +7,6 @@ type ItemDisplayData = {
     projectData: ProjectData,
     onClose: (id: string) => void
 }
-let jsonData
 
 export default function DisplayItem({project, projectData, onClose} : ItemDisplayData){
     
@@ -27,7 +26,7 @@ export default function DisplayItem({project, projectData, onClose} : ItemDispla
                 </div>
                 <div className="flex flex-wrap justify-center mb-10">
                     {projectData.Images.map((image) =>
-                        <img src={image} className="object-cover m-2 max-w-[400px]"></img>
+                        <img src={image} key={image} className="object-cover m-2 max-w-[400px]"></img>
                     )}
                 </div>
             </div>

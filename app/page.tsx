@@ -5,6 +5,7 @@ import GridComponent, {ProjectData} from "@/components/GridDisplay";
 import DisplayItem from "@/components/DisplayItem";
 import { useState } from "react";
 import projectJson from "@/public/Data/projects.json" with {type: "json"};
+import FeaturedItemDisplay from "@/components/FeaturedItem";
 
 let good = ""
 let items = projectJson
@@ -48,10 +49,10 @@ const HomePage : React.FC = () => {
           </div>
           <div className="@Space grow"></div>
           <div className="@Menu flex items-center justify-end">
-            <div className="ml-5 text-sm md:ml-10 md:text-xl"><a className="cursor-pointer ">Film</a></div>
-            <div className="ml-5 text-sm md:ml-10 md:text-xl"><a className="cursor-pointer ">Photography</a></div>
+            <div className="ml-5 text-sm md:ml-10 md:text-xl"><a className="cursor-pointer ">Featured</a></div>
+            <div className="ml-5 text-sm md:ml-10 md:text-xl"><a className="cursor-pointer ">Projects</a></div>
             <div className="ml-5 text-sm md:ml-10 md:text-xl"><a className="cursor-pointer">Projects</a></div>
-            <div className="ml-5 text-sm md:ml-10 md:text-xl"><button className="cursor-pointer rounded-4xl border-2 border-white p-2 px-4 hover:bg-white hover:text-gray-800">Contact Me</button></div>
+            <div className="ml-5 text-sm md:ml-10 md:text-xl"><button className="cursor-pointer rounded-4xl border-2 border-white p-2 px-4 hover:bg-white hover:text-gray-800">Connect</button></div>
           </div>
         </div>
         <div className="flex justify-center p-5">
@@ -62,7 +63,11 @@ const HomePage : React.FC = () => {
           <div className="@Space grow max-w-200"></div>
         </div>
       </section>
-      <section className="h-200 bg-amber-50 pt-10">
+      <section className="h-fit bg-amber-50 pt-3">
+        <FeaturedItemDisplay id="1" side="left"></FeaturedItemDisplay>
+        <FeaturedItemDisplay id="2" side="right"></FeaturedItemDisplay>
+      </section>
+      <section className="h-fit bg-amber-50 pt-10">
         <GridComponent onSelect={triggerSelected}></GridComponent>
         {selected_id && selected_data && (<DisplayItem project={selected_id} projectData={selected_data} onClose={triggerSelected}></DisplayItem>)}
       </section>
