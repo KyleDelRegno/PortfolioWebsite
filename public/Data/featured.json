@@ -3,18 +3,18 @@
         "id" : "1",
         "project" : "Subliminal | 2025",
         "comment" : "",
-        "image" : "/Data/images/sub1.PNG"
+        "image" : "/Data/images/sub1.avif"
     },
     {
         "id" : "2",
         "project" : "CyberPunk | 2024",
         "comment" : "",
-        "image" : "/Data/images/cyber3.jpg"
+        "image" : "/Data/images/cyber3.avif"
     },
     {
         "id" : "3",
         "project" : "Contract | 2024",
         "comment" : "This project relied on the construction",
-        "image" : "/Data/images/con1.PNG"
+        "image" : "/Data/images/con1.avif"
     }
 ]

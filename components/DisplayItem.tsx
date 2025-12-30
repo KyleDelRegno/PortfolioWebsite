@@ -1,5 +1,6 @@
 "use client"
 import React from "react";
+import Image from "next/image";
 import { ProjectData } from "./GridDisplay";
 
 type ItemDisplayData = {
@@ -22,7 +23,7 @@ export default function DisplayItem({project, projectData, onClose} : ItemDispla
                 <section className="flex flex-col xl:flex-row p-4 mt-6">
                     
                     <div className="w-full xl:w-3/4 overflow-hidden">
-                        <img src={projectData.cover} className="object-contain"></img>
+                        <Image src={projectData.cover} alt="" width={1000} height={1000} />
                     </div>
                     
                     <div className="p-4 basis-1/2 justify-end">
@@ -64,7 +65,10 @@ export default function DisplayItem({project, projectData, onClose} : ItemDispla
 
                 <section className={"max-w-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 h-auto justify-center gap-2 m-3"} >
                     {projectData.Images.map((image) =>
-                        <img src={image} key={image} className="object-fit mb-2"></img>
+                        <div key={image}>
+                            <Image src={image} alt="loading..."width={1000} height={1000}/>
+                        </div>
+
                     )}
                 </section>
             </div>
