@@ -29,7 +29,7 @@ const HomePage : React.FC = () => {
       for(const i in items){
         if(id==items[i].project){
             let jsonData=items[i]
-            setSelected(new ProjectData(items[i].project, items[i].type, items[i].role, items[i].date, items[i].description, items[i].images));
+            setSelected(new ProjectData(items[i].project, items[i].type, items[i].role, items[i].skills, items[i].date, items[i].description, items[i].cover, items[i].images));
         }
       refreshPage();
     };
@@ -51,7 +51,7 @@ const HomePage : React.FC = () => {
           <div className="@Menu flex items-center justify-end">
             <div className="ml-5 text-sm md:ml-10 md:text-xl"><a className="cursor-pointer ">Featured</a></div>
             <div className="ml-5 text-sm md:ml-10 md:text-xl"><a className="cursor-pointer ">Projects</a></div>
-            <div className="ml-5 text-sm md:ml-10 md:text-xl"><a className="cursor-pointer">Projects</a></div>
+            <div className="ml-5 text-sm md:ml-10 md:text-xl"><a className="cursor-pointer">About Me</a></div>
             <div className="ml-5 text-sm md:ml-10 md:text-xl"><button className="cursor-pointer rounded-4xl border-2 border-white p-2 px-4 hover:bg-white hover:text-gray-800">Connect</button></div>
           </div>
         </div>
@@ -63,9 +63,10 @@ const HomePage : React.FC = () => {
           <div className="@Space grow max-w-200"></div>
         </div>
       </section>
-      <section className="h-fit bg-amber-50 pt-3">
+      <section className="h-fit bg-amber-50 pt-3 gap-1">
         <FeaturedItemDisplay id="1" side="left"></FeaturedItemDisplay>
         <FeaturedItemDisplay id="2" side="right"></FeaturedItemDisplay>
+        <FeaturedItemDisplay id="3" side="left"></FeaturedItemDisplay>
       </section>
       <section className="h-fit bg-amber-50 pt-10">
         <GridComponent onSelect={triggerSelected}></GridComponent>

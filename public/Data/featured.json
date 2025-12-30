@@ -2,13 +2,19 @@
     {
         "id" : "1",
         "project" : "Subliminal | 2025",
-        "comment" : "There was once this super cool thing called code working easily all the time and not a shit ton of debugging but you know why the fuck not debug. Who needs that time anyways.",
+        "comment" : "",
         "image" : "/Data/images/sub1.PNG"
     },
     {
         "id" : "2",
+        "project" : "CyberPunk | 2024",
+        "comment" : "",
+        "image" : "/Data/images/cyber3.jpg"
+    },
+    {
+        "id" : "3",
         "project" : "Contract | 2024",
-        "comment" : "There was once this super cool thing called code working easily all the time and not a shit ton of debugging but you know why the fuck not debug. Who needs that time anyways.",
+        "comment" : "This project relied on the construction",
         "image" : "/Data/images/con1.PNG"
     }
 ]
