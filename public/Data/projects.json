@@ -6,11 +6,12 @@
         "skills" : ["Lightroom", "Photoshop", "Contrast"],
         "date" : "October 2025",
         "description" : "test",
+        "link": "none",
         "cover" : "/Data/images/porschebw7.avif",
         "images" : [
-            "/Data/images/porschebw1.avif",
-            "/Data/images/porschebw2.avif",
             "/Data/images/porschebw3.avif",
+            "/Data/images/porschebw2.avif",
+            "/Data/images/porschebw1.avif",
             "/Data/images/porschebw4.avif",
             "/Data/images/porschebw5.avif",
             "/Data/images/porschebw6.avif",
@@ -37,11 +38,12 @@
         "skills" : ["Blender", "Premiere Pro", "After Effects"],
         "date" : "May 2025",
         "description" : "test",
+        "link": "none",
         "cover" : "/Data/images/skillsnat5.avif",
         "images" : [
-            "/Data/images/skillsnat1.avif",
-            "/Data/images/skillsnat2.avif",
             "/Data/images/skillsnat3.avif",
+            "/Data/images/skillsnat2.avif",
+            "/Data/images/skillsnat1.avif",
             "/Data/images/skillsnat4.avif",
             "/Data/images/skillsnat5.avif"
         ]
@@ -53,6 +55,7 @@
         "skills" : ["Blender", "Premiere Pro", "After Effects"],
         "date" : "May 2025",
         "description" : "test",
+        "link": "none",
         "cover" : "/Data/images/btf11.avif",
         "images" : [
             "/Data/images/btf1.avif",
@@ -84,7 +87,8 @@
         "skills" : ["Blender", "Premiere Pro", "After Effects"],
         "date" : "December 2024 - January 2025",
         "description" : "An experimental dystopia, about altering memories, explores altering memories for grief benefits. This short film displays a snapshot of the protagonist's life as he is overcomming the loss of his best friend. ",
-        "cover" : "/Data/images/sub1.avif",
+        "link": "https://youtu.be/KHB0nx3tJrA",
+        "cover" : "/Data/images/sub6.avif",
         "images" : [
             "/Data/images/sub1.avif",
             "/Data/images/sub2.avif",
@@ -109,6 +113,7 @@
         "skills" : ["Premiere Pro", "Photoshop"],
         "date" : "September 2024 - October 2024",
         "description" : "A short dystopia film exploring the possibility of contracts and their binding contingencies. The main protagonist impulsively signs up for a position they know nothing about, only to find themselves stuck at work, instead of stuck in unemployment. This was my first project my senior year during my independent studies course, which allowed me to use this short film to push my creative limits and make the more ambitious projects that I wanted to.",
+        "link": "https://youtu.be/UX_DqmLiCis",
         "cover" : "/Data/images/con1.avif",
         "images" : [
             "/Data/images/con1.avif",
@@ -127,14 +132,15 @@
         "skills" : ["Blender", "Premiere Pro", "After Effects"],
         "date" : "March 2025",
         "description" : "test",
+        "link": "none",
         "cover" : "/Data/images/cyber1.avif",
         "images" : [
-            "/Data/images/cyber1.avif",
-            "/Data/images/cyber2.avif",
             "/Data/images/cyber3.avif",
+            "/Data/images/cyber2.avif",
+            "/Data/images/cyber7.avif",
             "/Data/images/cyber4.avif",
             "/Data/images/cyber6.avif",
-            "/Data/images/cyber7.avif",
+            "/Data/images/cyber1.avif",
             "/Data/images/cyber10.avif",
             "/Data/images/cyber11.avif",
             "/Data/images/cyber8.avif",
@@ -151,6 +157,7 @@
         "skills" : ["Blender", "Premiere Pro", "After Effects"],
         "date" : "October 2024",
         "description" : "test",
+        "link": "none",
         "cover" : "/Data/images/turbcon11.avif",
         "images" : [
             "/Data/images/turbcon2.avif",
@@ -180,6 +187,7 @@
         "skills" : ["Blender", "Premiere Pro", "After Effects"],
         "date" : "October 2024",
         "description" : "test",
+        "link": "https://youtu.be/L40sacGqDZY",
         "cover" : "/Data/images/star13.avif",
         "images" : [
             "/Data/images/star1.avif",

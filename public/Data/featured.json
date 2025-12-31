@@ -2,7 +2,7 @@
     {
         "id" : "1",
         "project" : "Subliminal | 2025",
-        "comment" : "",
+        "comment" : "Brought this world to life through the use of Blender and After effects. The memory splittign from the protagonists, or the dystopian world outside, was all created through after effects. First short I directed using vfx.",
         "image" : "/Data/images/sub1.avif"
     },
     {
@@ -14,7 +14,7 @@
     {
         "id" : "3",
         "project" : "Contract | 2024",
-        "comment" : "This project relied on the construction",
+        "comment" : "This story was inspired by the void scene from under the skin, and stranger things. I built and entire void set within a studio so that everything could be done practically, even the reflections, so that no vfx were used.",
         "image" : "/Data/images/con1.avif"
     }
 ]
