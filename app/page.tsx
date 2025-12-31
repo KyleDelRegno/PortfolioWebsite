@@ -43,7 +43,7 @@ const HomePage : React.FC = () => {
       <section className="h-400 bg-[url(/Images/Wallpaper3.png)] sm:bg-[url(/Images/Wallpaper2.png)] bg-no-repeat bg-local saturate-120
       bg-right bg-cover
       ">
-        <div className="mx-auto flex items-center justify-center p-10 pt-5">
+        <div className="mx-auto flex items-center justify-center p-4 sm:p-10 pt-5">
           <div className="@LOGO">
             <img src="logo.png" className="w-15"></img>
           </div>

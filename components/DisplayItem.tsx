@@ -31,8 +31,8 @@ export default function DisplayItem({project, projectData, onClose} : ItemDispla
                             <h1 className=" text-black text-5xl lg:text-6xl xl:text-8xl text-right font-bogle font-medium">{project}</h1>
                             <h1 className=" text-gray-700 text-lg xl:text-xl text-right font-manrope">{projectData.date}</h1>
                         </div>
-                        <div className="flex flex-col sm:flex-row justify-between mt-2">
-                            {projectData.link!=="none" ? <div className="sm:text-left justify-items-end sm:place-content-end m-1 mb-2 mt-2 sm:mb-0 sm:mt-0"><a href={projectData.link} target="_blank" className="flex flex-nowrap text-center w-fit cursor-pointer rounded-4xl border-2 p-1 px-4 border-white text-white bg-blue-500 hover:bg-blue-300 ">View Project Here</a></div> : <div></div>}
+                        <div className="flex flex-col sm:flex-row items-end sm:justify-between mt-2">
+                            {projectData.link!=="none" ? <div className="flex w-fit justify-end m-1 sm:m-0"><a href={projectData.link} target="_blank" className="text-center cursor-pointer rounded-4xl p-1.5 px-4 border-white text-white bg-blue-500 hover:bg-blue-300 ">View Project Here</a></div> : <div></div>}
                             <div>
                                 <div className="flex flex-wrap justify-end items-center">
                                     <h1 className="text-black">Role:</h1>
@@ -53,11 +53,11 @@ export default function DisplayItem({project, projectData, onClose} : ItemDispla
                     </div>
                 </section>
                 :
-                <section className="flex flex-col md:flex-row p-4 mt-4">
+                <section className="flex flex-col md:flex-row justify-between p-4 mt-4">
                     
                     <div className="flex flex-row w-full md:w-1/2  lg:w-2/3 overflow-hidden gap-2">
-                        <img src={projectData.cover} className="object-contain w-1/2"></img>
-                        <img src={projectData.Images[0]} className="object-contain w-1/2"></img>
+                        <img src={projectData.cover} className="object-cover sm:w-1/2 w-full"></img>
+                        <img src={projectData.Images[0]} className="object-cover w-1/2 invisible sm:visible"></img>
                     </div>
                     
                     <div className="flex flex-col w-full p1-4 pr-4 basis-1/3  justify-between">
@@ -66,7 +66,7 @@ export default function DisplayItem({project, projectData, onClose} : ItemDispla
                             <h1 className=" text-gray-700 text-lg xl:text-xl text-right font-manrope">{projectData.date}</h1>
                         </div>
                         <div className="flex flex-col sm:flex-row justify-between mt-2">
-                            {projectData.link!=="none" ? <div className="sm:text-left justify-items-end sm:place-content-end m-1 mb-2 mt-2 sm:mb-0 sm:mt-0"><a href={projectData.link} target="_blank" className="flex flex-nowrap text-center w-fit cursor-pointer rounded-4xl border-2 p-1 px-4 border-white text-white bg-blue-500 hover:bg-blue-300 ">View Project Here</a></div> : <div></div>}
+                            {projectData.link!=="none" ? <div className="sm:text-left justify-items-end place-content-end m-1 mb-2 mt-2 sm:mb-0 sm:mt-0"><a href={projectData.link} target="_blank" className="flex flex-nowrap text-center w-fit cursor-pointer rounded-4xl border-2 p-1 px-4 border-white text-white bg-blue-500 hover:bg-blue-300 ">View Project Here</a></div> : <div></div>}
                             <div>
                                 <div className="flex flex-wrap justify-end items-center">
                                     <h1 className="text-black">Role:</h1>
