@@ -5,7 +5,7 @@
         "role" : ["Photographer", "Editor"],
         "skills" : ["Lightroom", "Photoshop", "Contrast"],
         "date" : "October 2025",
-        "description" : "test",
+        "description" : "",
         "link": "none",
         "cover" : "/Data/images/porschebw7.avif",
         "images" : [
@@ -37,7 +37,7 @@
         "role" : ["Photographer", "Editor"],
         "skills" : ["Blender", "Premiere Pro", "After Effects"],
         "date" : "May 2025",
-        "description" : "test",
+        "description" : "",
         "link": "none",
         "cover" : "/Data/images/skillsnat5.avif",
         "images" : [
@@ -54,7 +54,7 @@
         "role" : ["Photographer", "Editor"],
         "skills" : ["Blender", "Premiere Pro", "After Effects"],
         "date" : "May 2025",
-        "description" : "test",
+        "description" : "",
         "link": "none",
         "cover" : "/Data/images/btf11.avif",
         "images" : [
@@ -131,7 +131,7 @@
         "role" : ["Photographer", "Editor"],
         "skills" : ["Blender", "Premiere Pro", "After Effects"],
         "date" : "March 2025",
-        "description" : "test",
+        "description" : "",
         "link": "none",
         "cover" : "/Data/images/cyber1.avif",
         "images" : [
@@ -156,7 +156,7 @@
         "role" : ["Director", "Producer", "Editor"],
         "skills" : ["Blender", "Premiere Pro", "After Effects"],
         "date" : "October 2024",
-        "description" : "test",
+        "description" : "",
         "link": "none",
         "cover" : "/Data/images/turbcon11.avif",
         "images" : [
@@ -186,7 +186,7 @@
         "role" : ["Producer", "Cinematographer"],
         "skills" : ["Blender", "Premiere Pro", "After Effects"],
         "date" : "October 2024",
-        "description" : "test",
+        "description" : "A short film entry for the 72 Fest Frederick Film Festival.",
         "link": "https://youtu.be/L40sacGqDZY",
         "cover" : "/Data/images/star13.avif",
         "images" : [
