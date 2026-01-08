@@ -5,16 +5,25 @@ import GridComponent, {ProjectData} from "@/components/GridDisplay";
 import DisplayItem from "@/components/DisplayItem";
 import { useState } from "react";
 import projectJson from "@/public/Data/projects.json" with {type: "json"};
+import featureJson from "@/public/Data/featured.json" with {type: "json"};
 import FeaturedItemDisplay from "@/components/FeaturedItem";
 
 let good = ""
 let items = projectJson
+let featuredItems = featureJson
 
 
 const HomePage : React.FC = () => {
   //Used To refresh the page when called
   const [, setVersion] = useState(0); 
   const refreshPage = () => { setVersion(v => v + 1) };
+  //Determines bio
+  let Bio = ""
+  for(const i in featuredItems){
+    if("bio"==featuredItems[i].id){
+      Bio = featuredItems[i].comment
+    }
+  }
   //Used To set the selected option Data
   const [selected_data, setSelected] = useState<ProjectData | undefined>();
   const [selected_id, setID] = useState("");
@@ -56,17 +65,17 @@ const HomePage : React.FC = () => {
         </div>
         <div className="flex justify-center p-10">
           <div>
-            <h1 className="font-roboto font-black text-6xl text-white sm:text-9xl pt-65">Kyle DelRegno</h1>
+            <h1 className="font-roboto font-black text-6xl text-white sm:text-9xl pt-35 sm:pt-65">Kyle DelRegno</h1>
             <h2 className="font-roboto font-bold text-gray-300 text-xl pt-8">Cinematographer | Creative Producer | Photographer</h2>
-            <h3 className="font-manrope text-gray-300 text-xl pt-8 w-200">I’m Kyle DelRegno, a film major and photographer based in Chicago. I focus on telling stories through film and photography in a way that feels natural and real. I enjoy capturing atmosphere and everyday moments, whether that’s on set, on the street, or behind the scenes.</h3>
+            <h3 className="font-manrope text-gray-300 text-xl pt-8  w-full lg:w-1/2">{Bio}</h3>
           </div>
           <div className="@Space grow max-w-200"></div>
         </div>
       </section>
       <section className=" h-fit bg-amber-50 pt-3 gap-1 pb-20" id="featured">
-        <h1 className="flex justify-center text-5xl sm:text-6xl text-black font-roboto font-bold mt-5 p-3 ">Featured Projects</h1>
+        <h1 className="flex justify-center text-4xl sm:text-6xl text-black font-roboto font-bold mt-5 p-3 ">Featured Projects</h1>
         <div className="flex justify-center">
-          <div className="w-100 h-1 bg-black mb-10"></div>
+          <div className="w-60 sm:w-100 h-1 bg-black mb-10"></div>
         </div>
         
         <FeaturedItemDisplay id="1" side="left"></FeaturedItemDisplay>
