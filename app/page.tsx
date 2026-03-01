@@ -45,11 +45,15 @@ const HomePage : React.FC = () => {
     };
     }
   }
-  function PurposeSwitch(){
-    purposeID=!purposeID;
+  function Gallery(type: string){
+    if(type=="Creative"){
+      purposeID=false;
+    }
+    else{
+      purposeID=true;
+    }
     refreshPage();
   }
-
   return (
 
     <main>
@@ -63,8 +67,8 @@ const HomePage : React.FC = () => {
           <div className="@Space grow"></div>
           <div className="@Menu flex items-center justify-end">
             <div className="ml-5 text-sm text-gray-200 md:ml-10 md:text-xl    hover:text-white hover:scale-105"><a className="cursor-pointer " href="#featured">Featured</a></div>
-            <div className="ml-5 text-sm text-gray-200 md:ml-10 md:text-xl    hover:text-white hover:scale-105"><a className="cursor-pointer " href="#projects">Projects</a></div>
-            <div className="ml-5 text-sm text-gray-200 md:ml-10 md:text-xl    hover:text-white hover:scale-105"><a className="cursor-pointer " href="#projects">Freelance</a></div>
+            <div className="ml-5 text-sm text-gray-200 md:ml-10 md:text-xl    hover:text-white hover:scale-105"><a className="cursor-pointer " href="#projects" onClick={() => Gallery("Creative")}>Projects</a></div>
+            <div className="ml-5 text-sm text-gray-200 md:ml-10 md:text-xl    hover:text-white hover:scale-105"><a className="cursor-pointer " href="#projects" onClick={() => Gallery("Freelance")}>Freelance</a></div>
             <div className="ml-5 text-sm text-gray-200 md:ml-10 md:text-xl"><a className="cursor-pointer rounded-4xl border-2 border-gray-200 p-2 px-4 hover:border-white hover:bg-white hover:text-gray-800" href="#contact">Connect</a></div>
           </div>
         </div>
@@ -89,20 +93,20 @@ const HomePage : React.FC = () => {
       <section className="h-fit bg-amber-50 pt-5 pb-30" id="projects">
 
         {!purposeID && <div className="flex justify-center bg-amber-70 w-full gap-5 rounded-2xl h-20 pl-5 pr-5">
-          <div className="flex justify-center items-center w-1/2 bg-amber-950/20 rounded-xl">
+          <div className="flex justify-center items-center sm:w-1/2 w-3/5 bg-amber-950/20 rounded-xl">
             <h1 className="text-2xl sm:text-4xl text-black font-roboto font-bold text-nowrap">Creative Projects</h1>
           </div>
-          <div className="flex justify-center items-center w-1/2 bg-amber-950/10 bg-blend-darken rounded-xl text-black/50
-          hover:scale-105 hover:text-black cursor-pointer" onClick={PurposeSwitch}>
+          <div className="flex justify-center items-center sm:w-1/2 w-2/5 bg-amber-950/10 bg-blend-darken rounded-xl text-black/50
+          hover:scale-105 hover:text-black cursor-pointer" onClick={() => Gallery("Freelance")}>
             <h1 className="text-2xl sm:text-4xl font-roboto font-bold text-nowrap">Freelance</h1>
           </div>
         </div> }
         {purposeID && <div className="flex justify-center bg-amber-70 w-full gap-5 rounded-2xl h-20 pl-5 pr-5">
-          <div className="flex justify-center items-center w-1/2 bg-amber-950/10 bg-blend-darken rounded-xl text-black/50
-          hover:scale-105 hover:text-black cursor-pointer" onClick={PurposeSwitch}>
+          <div className="flex justify-center items-center sm:w-1/2 w-3/5 bg-amber-950/10 bg-blend-darken rounded-xl text-black/50
+          hover:scale-105 hover:text-black cursor-pointer" onClick={() => Gallery("Creative")}>
             <h1 className="text-2xl sm:text-4xl font-roboto font-bold text-nowrap">Creative Projects</h1>
           </div>
-          <div className="flex justify-center items-center w-1/2 bg-amber-950/20 rounded-xl">
+          <div className="flex justify-center items-center sm:w-1/2 w-2/5 bg-amber-950/20 rounded-xl">
             <h1 className="text-2xl sm:text-4xl text-black font-roboto font-bold text-nowrap">Freelance</h1>
           </div>
           
