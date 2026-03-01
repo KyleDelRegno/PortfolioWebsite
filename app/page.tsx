@@ -11,6 +11,7 @@ import FeaturedItemDisplay from "@/components/FeaturedItem";
 let good = ""
 let items = projectJson
 let featuredItems = featureJson
+let purposeID = false;
 
 
 const HomePage : React.FC = () => {
@@ -38,18 +39,21 @@ const HomePage : React.FC = () => {
       for(const i in items){
         if(id==items[i].project){
             let jsonData=items[i]
-            setSelected(new ProjectData(items[i].project, items[i].type, items[i].role, items[i].skills, items[i].date, items[i].description, items[i].link, items[i].cover, items[i].images));
+            setSelected(new ProjectData(items[i].project, items[i].type, items[i].purpose, items[i].role, items[i].skills, items[i].date, items[i].description, items[i].link, items[i].cover, items[i].images));
         }
       refreshPage();
     };
     }
   }
-
+  function PurposeSwitch(){
+    purposeID=!purposeID;
+    refreshPage();
+  }
 
   return (
 
     <main>
-      <section className="h-svh bg-[url(/Images/Wallpaper3.png)] sm:bg-[url(/Images/Wallpaper2.png)] bg-no-repeat bg-local saturate-120
+      <section className="min-h-svh bg-[url(/Images/Wallpaper3.png)] sm:bg-[url(/Images/Wallpaper2.png)] bg-no-repeat bg-local saturate-120
       bg-top-right bg-cover
       ">
         <div className="mx-auto flex items-center justify-center p-4 sm:p-10 pt-5">
@@ -58,9 +62,10 @@ const HomePage : React.FC = () => {
           </div>
           <div className="@Space grow"></div>
           <div className="@Menu flex items-center justify-end">
-            <div className="ml-5 text-sm text-white md:ml-10 md:text-xl"><a className="cursor-pointer " href="#featured">Featured</a></div>
-            <div className="ml-5 text-sm text-white md:ml-10 md:text-xl"><a className="cursor-pointer " href="#projects">Projects</a></div>
-            <div className="ml-5 text-sm text-white md:ml-10 md:text-xl"><a className="cursor-pointer rounded-4xl border-2 border-white p-2 px-4 hover:bg-white hover:text-gray-800" href="#contact">Connect</a></div>
+            <div className="ml-5 text-sm text-gray-200 md:ml-10 md:text-xl    hover:text-white hover:scale-105"><a className="cursor-pointer " href="#featured">Featured</a></div>
+            <div className="ml-5 text-sm text-gray-200 md:ml-10 md:text-xl    hover:text-white hover:scale-105"><a className="cursor-pointer " href="#projects">Projects</a></div>
+            <div className="ml-5 text-sm text-gray-200 md:ml-10 md:text-xl    hover:text-white hover:scale-105"><a className="cursor-pointer " href="#projects">Freelance</a></div>
+            <div className="ml-5 text-sm text-gray-200 md:ml-10 md:text-xl"><a className="cursor-pointer rounded-4xl border-2 border-gray-200 p-2 px-4 hover:border-white hover:bg-white hover:text-gray-800" href="#contact">Connect</a></div>
           </div>
         </div>
         <div className="flex justify-center p-10">
@@ -82,11 +87,33 @@ const HomePage : React.FC = () => {
         <FeaturedItemDisplay id="3" side="right"></FeaturedItemDisplay>
       </section>
       <section className="h-fit bg-amber-50 pt-5 pb-30" id="projects">
-        <h1 className="flex justify-center text-5xl sm:text-6xl text-black font-roboto font-bold p-3">Projects</h1>
-        <div className="flex justify-center">
-          <div className="w-40 h-1 bg-black mb-10"></div>
-        </div>
-        <GridComponent onSelect={triggerSelected}></GridComponent>
+
+        {!purposeID && <div className="flex justify-center bg-amber-70 w-full gap-5 rounded-2xl h-20 pl-5 pr-5">
+          <div className="flex justify-center items-center w-1/2 bg-amber-950/20 rounded-xl">
+            <h1 className="text-2xl sm:text-4xl text-black font-roboto font-bold text-nowrap">Creative Projects</h1>
+          </div>
+          <div className="flex justify-center items-center w-1/2 bg-amber-950/10 bg-blend-darken rounded-xl text-black/50
+          hover:scale-105 hover:text-black cursor-pointer" onClick={PurposeSwitch}>
+            <h1 className="text-2xl sm:text-4xl font-roboto font-bold text-nowrap">Freelance</h1>
+          </div>
+        </div> }
+        {purposeID && <div className="flex justify-center bg-amber-70 w-full gap-5 rounded-2xl h-20 pl-5 pr-5">
+          <div className="flex justify-center items-center w-1/2 bg-amber-950/10 bg-blend-darken rounded-xl text-black/50
+          hover:scale-105 hover:text-black cursor-pointer" onClick={PurposeSwitch}>
+            <h1 className="text-2xl sm:text-4xl font-roboto font-bold text-nowrap">Creative Projects</h1>
+          </div>
+          <div className="flex justify-center items-center w-1/2 bg-amber-950/20 rounded-xl">
+            <h1 className="text-2xl sm:text-4xl text-black font-roboto font-bold text-nowrap">Freelance</h1>
+          </div>
+          
+        </div> }
+
+
+
+
+        <div className="mt-5"></div>
+        {!purposeID && <GridComponent onSelect={triggerSelected} purpose="Creative"></GridComponent> }
+        {purposeID && <GridComponent onSelect={triggerSelected} purpose="Freelance"></GridComponent> }
         {selected_id && selected_data && (<DisplayItem project={selected_id} projectData={selected_data} onClose={triggerSelected}></DisplayItem>)}
       </section>
       <section className="h-fit bg-amber-50 pb-7 pt-7 border-t-4 border-black" id="contact">

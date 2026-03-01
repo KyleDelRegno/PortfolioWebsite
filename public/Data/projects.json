@@ -2,6 +2,7 @@
     {
         "project" : "Porsche Car Show",
         "type" : "Photo",
+        "purpose" : "Creative",
         "role" : ["Photographer", "Editor"],
         "skills" : ["Lightroom", "Photoshop", "Contrast"],
         "date" : "October 2025",
@@ -34,6 +35,7 @@
     {
         "project" : "Skills USA Nationals 2025",
         "type" : "Photo",
+        "purpose" : "Creative",
         "role" : ["Photographer", "Editor"],
         "skills" : ["Blender", "Premiere Pro", "After Effects"],
         "date" : "May 2025",
@@ -51,6 +53,7 @@
     {
         "project" : "Back To The Future",
         "type" : "Photo",
+        "purpose" : "Creative",
         "role" : ["Photographer", "Editor"],
         "skills" : ["Blender", "Premiere Pro", "After Effects"],
         "date" : "May 2025",
@@ -83,6 +86,7 @@
     {
         "project" : "Subliminal",
         "type" : "Video",
+        "purpose" : "Creative",
         "role" : ["Director", "Producer", "Editor"],
         "skills" : ["Blender", "Premiere Pro", "After Effects"],
         "date" : "December 2024 - January 2025",
@@ -109,6 +113,7 @@
     {
         "project" : "Contract",
         "type" : "Video",
+        "purpose" : "Creative",
         "role" : ["Director", "Producer", "Editor"],
         "skills" : ["Premiere Pro", "Photoshop"],
         "date" : "September 2024 - October 2024",
@@ -128,6 +133,7 @@
     {
         "project" : "CyberPunk",
         "type" : "Photo",
+        "purpose" : "Creative",
         "role" : ["Photographer", "Editor"],
         "skills" : ["Blender", "Premiere Pro", "After Effects"],
         "date" : "March 2025",
@@ -153,6 +159,7 @@
     {
         "project" : "Turbulance Concert",
         "type" : "Video",
+        "purpose" : "Freelance",
         "role" : ["Director", "Producer", "Editor"],
         "skills" : ["Blender", "Premiere Pro", "After Effects"],
         "date" : "October 2024",
@@ -183,6 +190,7 @@
     { 
         "project" : "My Star",
         "type" : "Video",
+        "purpose" : "Creative",
         "role" : ["Producer", "Cinematographer"],
         "skills" : ["Blender", "Premiere Pro", "After Effects"],
         "date" : "October 2024",
