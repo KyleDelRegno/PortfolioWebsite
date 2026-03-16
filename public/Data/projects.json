@@ -52,6 +52,40 @@
         ]
     },
     {
+        "project" : "Weddings 2025",
+        "type" : "Video",
+        "purpose" : "Freelance",
+        "role" : ["Videographer", "Editor"],
+        "skills" : ["Photoshop", "Premiere Pro"],
+        "date" : "May - October 2025",
+        "description" : "",
+        "link": "none",
+        "cover" : "/Data/images/wed25-4.avif",
+        "images" : [
+                "/Data/images/wed25-1.avif",
+                "/Data/images/wed25-2.avif",
+                "/Data/images/wed25-3.avif",
+                "/Data/images/wed25-4.avif",
+                "/Data/images/wed25-5.avif",
+                "/Data/images/wed25-6.avif",
+                "/Data/images/wed25-7.avif",
+                "/Data/images/wed25-19.avif",
+                "/Data/images/wed25-20.avif",
+                "/Data/images/wed25-8.avif",
+                "/Data/images/wed25-9.avif",
+                "/Data/images/wed25-10.avif",
+                "/Data/images/wed25-11.avif",
+                "/Data/images/wed25-12.avif",
+                "/Data/images/wed25-13.avif",
+                "/Data/images/wed25-14.avif",
+                "/Data/images/wed25-15.avif",
+                "/Data/images/wed25-16.avif",
+                "/Data/images/wed25-17.avif",
+                "/Data/images/wed25-18.avif"
+                
+        ]
+    },
+    {
         "project" : "Graduation Photos for UMD Graduates",
         "type" : "Photo",
         "purpose" : "Freelance",
