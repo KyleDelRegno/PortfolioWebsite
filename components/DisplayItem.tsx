@@ -6,16 +6,17 @@ import { ProjectData } from "./GridDisplay";
 type ItemDisplayData = {
     project: string,
     projectData: ProjectData,
-    onClose: (id: string) => void
+    onClose: (id: string) => void,
+    onEnlarge: (id: string) => void,
+    enlargeData: string;
 }
 
-export default function DisplayItem({project, projectData, onClose} : ItemDisplayData){
-    
-    
+export default function DisplayItem({project, projectData, onClose, onEnlarge, enlargeData} : ItemDisplayData){
+
     return(
         <div className="fixed no-doc-scroll z-100 inset-0 flex justify-center items-center
         transition-colors bg-black/90 backdrop-blur-xs">
-            <button className="absolute top-0 right-0 p-1 text-xl lg:p-10 lg:text-3xl text-white cursor-pointer" onClick={() => onClose("")}>X</button>
+            <button className="absolute top-0 right-0 p-1 text-xl lg:p-10 lg:text-3xl text-white hover:cursor-pointer hover:scale-110" onClick={() => onClose("")}>X</button>
 
 
             <div className="h-7/8 w-7/8 bg-white overflow-y-scroll">
@@ -96,14 +97,18 @@ export default function DisplayItem({project, projectData, onClose} : ItemDispla
                 <section className={"max-w-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 h-auto justify-center gap-2 m-2"} >
                     {projectData.Images.map((image) =>
                         <div key={image} className="">
-                            <Image src={image} alt="loading..." className="object-cover" width={500} height={500} sizes="(max-width: 320px) 30vw, 20vw" quality={40} loading="lazy" decoding="async"/>
+                            <Image src={image} alt="loading..." className="object-cover hover:cursor-pointer hover:scale-101" width={500} height={500} sizes="(max-width: 320px) 30vw, 20vw" quality={40} loading="lazy" decoding="async" onClick={() => onEnlarge(image)}/>
                         </div>
 
                     )}
                 </section>
+                { enlargeData && <section className="fixed no-doc-scroll z-100 inset-0 flex justify-center items-center
+        transition-colors bg-black/90 backdrop-blur-xs p-10" onClick={() => onEnlarge("")}>
+                    <div key="enlarged" className="relative w-full h-full max-w-[95vw] max-h-[95vh] ">
+                        <Image src={enlargeData || ""} alt={"Enlarged Photo"} fill quality={100} className="object-contain" priority unoptimized={true}/>
+                    </div>
+                </section>}
             </div>
-
         </div>
     )
-    
 }

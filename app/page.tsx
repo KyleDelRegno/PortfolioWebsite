@@ -29,12 +29,12 @@ const HomePage : React.FC = () => {
   const [selected_data, setSelected] = useState<ProjectData | undefined>();
   const [selected_id, setID] = useState("");
   function triggerSelected(id: string){
-    if(selected_data && selected_id){
+    if(selected_data && selected_id){ //This removes the grid and element
       setSelected(undefined);
       setID("");
       refreshPage();
     }
-    else{
+    else{ //This loads the Grid and Element
       setID(id);
       for(const i in items){
         if(id==items[i].project){
@@ -45,6 +45,15 @@ const HomePage : React.FC = () => {
     };
     }
   }
+  //used to Enlarge an image to higher quality on click
+  const [enlarge_data, setEnlarge] = useState<string>("");
+  function enlargeSelected(id: string){
+    if(enlarge_data){ setEnlarge(""); }
+    else{ setEnlarge(id); }
+    refreshPage();
+  }
+
+  //What does this Do? I have no fucking Idea. Wait this switches between the creative and freelance sections
   function Gallery(type: string){
     if(type=="Creative"){
       purposeID=false;
@@ -118,7 +127,7 @@ const HomePage : React.FC = () => {
         <div className="mt-5"></div>
         {!purposeID && <GridComponent onSelect={triggerSelected} purpose="Creative"></GridComponent> }
         {purposeID && <GridComponent onSelect={triggerSelected} purpose="Freelance"></GridComponent> }
-        {selected_id && selected_data && (<DisplayItem project={selected_id} projectData={selected_data} onClose={triggerSelected}></DisplayItem>)}
+        {selected_id && selected_data && (<DisplayItem project={selected_id} projectData={selected_data} onClose={triggerSelected} onEnlarge={enlargeSelected} enlargeData={enlarge_data}></DisplayItem>)}
       </section>
       <section className="h-fit bg-amber-50 pb-7 pt-7 border-t-4 border-black" id="contact">
         <div className="flex flex-col md:flex-row justify-center items-center gap-10">

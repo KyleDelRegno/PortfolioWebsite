@@ -54,7 +54,7 @@ export default function GridComponent({ onSelect, purpose }: GridDisplayData) {
             {items.map((project) => project.purpose === purpose ? ( //loops through all the projects
                 <div key={project.project} className={project.type === 'Video' ? 'row-span-1' : 'row-span-2'}>
                     <div className="relative flex group h-fit 
-                    transition duration-300 ease-in-out hover:scale-120 hover:z-60 cursor-pointer" onClick={() => onSelect(project.project)}>
+                    transition duration-300 ease-in-out hover:scale-105 hover:z-60 cursor-pointer" onClick={() => onSelect(project.project)}>
                         <div className="invisible absolute inset-0 bg-gray-600/60 size-full group-hover:visible">
                             <div className="flex h-full w-full justify-center items-center">
                                 <h1 className="text-3xl m-10 text-center text-wrap text-white font-black">{project.project}</h1>
