@@ -95,8 +95,8 @@ export default function DisplayItem({project, projectData, onClose} : ItemDispla
 
                 <section className={"max-w-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 h-auto justify-center gap-2 m-2"} >
                     {projectData.Images.map((image) =>
-                        <div key={image}>
-                            <Image src={image} alt="loading..."width={1000} height={1000}/>
+                        <div key={image} className="">
+                            <Image src={image} alt="loading..." className="object-cover" width={500} height={500} sizes="(max-width: 320px) 30vw, 20vw" quality={40} loading="lazy" decoding="async"/>
                         </div>
 
                     )}
