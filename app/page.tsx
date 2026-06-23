@@ -66,7 +66,7 @@ const HomePage : React.FC = () => {
   return (
 
     <main>
-      <section className="min-h-svh bg-[url(/Images/Header4.png)] sm:bg-[url(/Images/Header3.png)] lg:bg-[url(/Images/Header2.png)] bg-no-repeat bg-local saturate-120
+      <section className="min-h-svh bg-[url(/Images/Header4.avif)] sm:bg-[url(/Images/Header3.avif)] lg:bg-[url(/Images/Header2.avif)] bg-no-repeat bg-local saturate-120
       bg-top-right bg-cover flex flex-col justify-between
       ">
         <div className="p-5 pt-10">
