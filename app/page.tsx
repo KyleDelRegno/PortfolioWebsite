@@ -66,39 +66,45 @@ const HomePage : React.FC = () => {
   return (
 
     <main>
-      <section className="min-h-svh bg-[url(/Images/Wallpaper3.png)] sm:bg-[url(/Images/Wallpaper2.png)] bg-no-repeat bg-local saturate-120
-      bg-top-right bg-cover
+      <section className="min-h-svh bg-[url(/Images/Header4.png)] sm:bg-[url(/Images/Header3.png)] lg:bg-[url(/Images/Header2.png)] bg-no-repeat bg-local saturate-120
+      bg-top-right bg-cover flex flex-col justify-between
       ">
-        <div className="mx-auto flex items-center justify-center p-4 sm:p-10 pt-5">
-          <div className="@LOGO">
-            <img src="logo.svg" className="w-20"></img>
-          </div>
-          <div className="@Space grow"></div>
-          <div className="@Menu flex items-center justify-end">
-            <div className="ml-5 text-sm text-gray-200 md:ml-10 md:text-xl    hover:text-white hover:scale-105"><a className="cursor-pointer " href="#featured">Featured</a></div>
-            <div className="ml-5 text-sm text-gray-200 md:ml-10 md:text-xl    hover:text-white hover:scale-105"><a className="cursor-pointer " href="#projects" onClick={() => Gallery("Creative")}>Projects</a></div>
-            <div className="ml-5 text-sm text-gray-200 md:ml-10 md:text-xl    hover:text-white hover:scale-105"><a className="cursor-pointer " href="#projects" onClick={() => Gallery("Freelance")}>Freelance</a></div>
-            <div className="ml-5 text-sm text-gray-200 md:ml-10 md:text-xl"><a className="cursor-pointer rounded-4xl border-2 border-gray-200 p-2 px-4 hover:border-white hover:bg-white hover:text-gray-800" href="#contact">Connect</a></div>
+        <div className="p-5 pt-10">
+          <div className="mx-auto sm:flex items-center flex flex-row justify-between pt-5 w-full p-0 sm:p-5
+          ">
+            <div className="@LOGO">
+              {/* <img src="logo.svg" className="w-20"></img> */}
+              <h1 className="font-roboto font-black text-xl text-white lg:text-5xl sm:text-3xl">Kyle DelRegno</h1>
+            </div>
+            <div className="@Menu flex items-center justify-end h-full">
+              {/* <div className="ml-5 text-sm text-gray-200 md:ml-10 md:text-xl    hover:text-white hover:scale-105"><a className="cursor-pointer " href="#featured">Featured</a></div> */}
+              <div className="ml-5 text-sm text-gray-200 md:ml-10 md:text-xl    hover:text-white hover:scale-105"><a className="cursor-pointer " href="#projects" onClick={() => Gallery("Creative")}>Projects</a></div>
+              <div className="ml-5 text-sm text-gray-200 md:ml-10 md:text-xl    hover:text-white hover:scale-105"><a className="cursor-pointer " href="#projects" onClick={() => Gallery("Freelance")}>Freelance</a></div>
+              <div className="ml-5 text-sm text-gray-200 md:ml-10 md:text-xl"><a className="cursor-pointer rounded-4xl border-2 border-gray-200 p-2 px-4 hover:border-white hover:bg-white hover:text-gray-800" href="#contact">Connect</a></div>
+            </div>
           </div>
         </div>
-        <div className="flex justify-center p-10">
-          <div>
-            <h1 className="font-roboto font-black text-6xl text-white sm:text-9xl pt-35 sm:pt-65">Kyle DelRegno</h1>
-            <h2 className="font-roboto font-bold text-gray-300 text-xl pt-8">Cinematographer | Creative Producer | Photographer</h2>
-            <h3 className="font-manrope text-gray-300 text-xl pt-8  w-full lg:w-1/2">{Bio}</h3>
+
+        <div className="flex p-5 pt-45 sm:pt-100 pb-10 w-full lg:w-1/2">
+          <div className="pt-10 pl-5 pr-5 pb-10 backdrop-blur-xs bg-black/15 backdrop-grayscale-20 rounded-lg">
+            <h1 className="font-roboto font-black text-5xl text-white sm:text-5xl w-fit">About Me</h1>
+            <h2 className="font-roboto font-bold text-white text-xl pt-8 w-fit">Cinematographer | Photographer | Storyteller</h2>
+            <h3 className="font-manrope text-white text-xl pt-8">{Bio}</h3>
           </div>
-          <div className="@Space grow max-w-200"></div>
         </div>
       </section>
+      {/*
       <section className=" h-fit bg-amber-50 pt-3 gap-1 pb-20" id="featured">
         <h1 className="flex justify-center text-4xl sm:text-6xl text-black font-roboto font-bold mt-5 p-3 ">Featured Projects</h1>
         <div className="flex justify-center">
           <div className="w-60 sm:w-100 h-1 bg-black mb-10"></div>
         </div>
-        
+
         <FeaturedItemDisplay id="1" side="left"></FeaturedItemDisplay>
         <FeaturedItemDisplay id="3" side="right"></FeaturedItemDisplay>
+
       </section>
+       */}
       <section className="h-fit bg-amber-50 pt-5 pb-30" id="projects">
 
         {!purposeID && <div className="flex justify-center bg-amber-70 w-full gap-5 rounded-2xl h-20 pl-5 pr-5">
